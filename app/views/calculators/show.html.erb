@@ -1,0 +1,29 @@
+
+<div class="container-fluid centered bg-img">
+  <div class="card shadow-sm mt-4 mb-4 p-3 pb-0" style="width: 40rem;">
+    <div class="card-body">
+      <h5 class="card-title text-center mb-4">Расчёт стоимости проживания</h5>
+        <%= simple_form_for :calculator, url: calculate_path do |f| %>
+            <div class="row">
+                <div class="mb-3 col-6">
+                    <h5 class="mx-2">Введите дату заселения:</h5>
+                    <%= f.input :checkin_date, as: :date, label: false, html5: true %>
+                </div>
+                <div class="mb-3 col-6">
+                    <h5 class="mx-1">Введите количество дней:</h5>
+                    <%= f.input :days, as: :numeric, label: false %>
+                </div>  
+            </div> 
+
+            <%= f.button :submit, "Рассчитать", class: 'btn btn-lg mb-3 btn-primary btn-floating text-center' %>
+
+            
+        <% end %>
+
+        <div>
+          <%= @cost %>
+        </div>
+
+    </div>
+  </div>
+<div>
