@@ -1,0 +1,10 @@
+<turbo-stream action="append" target="result">
+  <template>
+    <hr />
+    <div class="h5 text-center">
+      Стоимость проживания на период<br />
+      с <%= @checkin_date %> по <%= @checkout_date %> составит:
+    </div>
+    <div class="h1 text-center"><%= @cost %>&nbsp;&#8381;</div>
+  </template>
+</turbo-stream>
